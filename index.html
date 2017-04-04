@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   
+    <meta charset="UTF-8">
+    
+    <title>Alexandre MASSÉ - Portait Chinois</title>
+    
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /><![endif]-->
+    
+    <!-- Feuille de style normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Feuille de style font -->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Feuille de style perso -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    
+<!-- Petite introduction pour les curieux regardant les codes sources ;-) -->
+
+
+<!-- PRINCIPE : La page est construite sous forme de balises <imput> de type "radio" derrière lesquelles se situe du contenu (dans une balise <section>), le contenu de cette balise ne va être affiché qu'une fois la balise imput dans l'état "checked".
+La navigation se fait alors à l'aide de balises <label>, en effet, en sélectionnant une balise <label> cela va "checked" la balise <input> correspondante et par conséquent afficher le contenu de la balise <section> à la suite de cette dernière.
+
+POURQUOI ne pas s'être simplifié la vie avec du javascript ? Par défis ! Et aussi parce que je ne maitrise pas encore assez bien javascript pour le faire de mes propores mains sans recopier bêtement des lignes de codes. Du coup j'ai fais sans, cela implique une structure un peu plus complexe mais tout est réalisé par mes soins en HTML/CSS, et ça c'est cool. Bonne lecture petit(e) curieu(x)(se) :-D -->
+  
+   
+<div class="main">
+   
+    <!-- - - - - - - - - - - - - ACCUEIL - - - - - - - - - - - - -->
+    
+    
+    <input id="accueil" type="radio" name="slides" checked>
+    <section class="slide pageaccueil">
+       
+        <div class="container">
+               
+                <h1>PORTRAIT CHINOIS</h1>
+                
+                <div class="barre">
+                    <hr>
+                </div>
+                
+                <h2>Alexandre Massé</h2>
+                
+            <nav>
+                <label for="apropos">A propos</label>
+                <label for="theme-1">C'est parti !</label>
+            </nav>
+        </div>
+        
+    </section>
+    
+    
+    <!-- - - - - - - - - - - - - A PROPOS - - - - - - - - - - - - -->
+    
+    
+    <input id="apropos" type="radio" name="slides">
+    <section class="slide apropos">
+        
+        <div class="container">
+            
+            <h1>A propos</h1>
+            
+            <div class="barre2">
+                <hr>
+            </div>
+            
+            <div class="presentation">
+                <div>Bonjour !</div>
+                <p>Heureux de t'accueillir sur mon portrait chinois ! Je m'appelle Alexandre Massé est je suis actuellement étudiant en première année de DUT "Métiers du Multimédia et de l'Internet" à Champs-sur-Marne (psssst pour en savoir un peu plus c'est par  <a href="http://iut.u-pem.fr/formations/dut-metiers-du-multimedia-et-de-linternet/">ici</a>).</p>
+                <p>Grâce à ce portrait chinois tu vas apprendre à mieux me connaitre à travers différents thèmes auxquels je vais m'identifier. </p>
+                <p>Étant un passionné de photographie l'ensemble des visuels illustrant ces thèmes sont de ma propre création, en espérant qu'ils te plaisent.</p>
+                <br>            
+                <div>Sur ce, il ne me reste plus qu'à te souhaiter une bonne visite !</div>
+            </div>
+            
+            
+            <img src="img/Photo-Profil.jpg" alt="photo">
+            
+            <ul>
+                <li><a href="./pdf/CV.pdf">Mon CV</a></li>
+                <li><a href="https://fr.linkedin.com/in/alexandremasse">Mon Linkedin</a></li>
+                <li><a href="https://www.flickr.com/photos/alexandre_masse/">Mon Flickr</a></li>
+            </ul>
+            
+            <label class="icon-croix" for="accueil"></label>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <!-- - - - - - - - - - - - - THEME 1 : UN SITE WEB - - - - - - - - - - - - -->
+    
+    
+    <input id="theme-1" type="radio" name="slides">
+    <section class="slide siteweb">
+      
+        <div class="container">
+           
+            <h1 class="sijetais"><span>si j'étais...</span> un  site web</h1>
+            
+            <h2 class="jeserais"><span>je serais...</span><br>Flickr !</h2>
+            
+            
+            <div class="parceque">
+                <p>Flickr est selon moi l’une des révolutions les plus importantes qui soient arrivées à la photographie ces dernières années. En donnant accès au plus grand catalogue de photographies et de photographes au monde tout en permettant une interaction entre eux, Flickr a complètement renouvelé les pratiques photographiques.</p>
+<p>Grace à lui je partage avec le monde ma passion, à travers lui je m’exprime et transmets une autre vision du monde, ma vision du monde, que je vous invite à <a href="https://www.flickr.com/photos/alexandre_masse/">découvrir ici</a>.</p> 
+            </div>
+            
+            
+            <nav class="nav-theme">
+                <label class="icon-home2" for="accueil"></label><!-- correction du white spacing
+                --><label class="icon-siteweb1" for="theme-1"></label><!--
+                --><label class="icon-music1" for="theme-2"></label><!--
+                --><label class="icon-bonbon" for="theme-3"></label><!--
+                --><label class="icon-os1" for="theme-4"></label><!--   
+                --><label class="icon-sentiment2" for="theme-5"></label><!--   
+                --><label class="icon-ouverture" for="theme-6"></label><!--   
+                --><label class="icon-plante1" for="theme-7"></label>   
+            </nav>
+               
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <!-- - - - - - - - - - - - - THEME 2 : UN GROUPRE DE MUSIQUE  - - - - - - - - - - - - -->
+    
+    
+    <input id="theme-2" type="radio" name="slides">
+    <section class="slide musique">
+      
+        <div class="container">
+           
+            <h1 class="sijetais"><span>si j'étais...</span> un  groupe de musique</h1>
+            
+            <h2 class="jeserais"><span>je serais...</span><br>Yellowcard !</h2>
+            
+            
+            <div class="parceque">
+                <p>C’est le groupe pop-punk américain qui a littéralement bercé mon adolescence. J’ai grandi avec eux et aujourd’hui je peux dire que d’une certaine façon ils font partie intégrante de ma vie. C’est notamment autour de leurs créations que j’ai forgé au fil des années ma culture et mon univers musical.</p>
+<p>Je leur dois beaucoup, pour la petite histoire c’est par intérêt pour leurs musiques que je me suis obligé à faire mes premiers par sur le Web à l’âge de 7 ans. Sans eux pourrai-je affirmer que je serai en train d’écrire ces lignes ici ? Surement pas.</p> 
+            </div>
+            
+            
+            
+            <nav class="nav-theme">
+                <label class="icon-home2" for="accueil"></label><!-- correction du white spacing
+                --><label class="icon-siteweb1" for="theme-1"></label><!--
+                --><label class="icon-music1" for="theme-2"></label><!--
+                --><label class="icon-bonbon" for="theme-3"></label><!--
+                --><label class="icon-os1" for="theme-4"></label><!--   
+                --><label class="icon-sentiment2" for="theme-5"></label><!--   
+                --><label class="icon-ouverture" for="theme-6"></label><!--   
+                --><label class="icon-plante1" for="theme-7"></label>   
+            </nav>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <!-- - - - - - - - - - - - - THEME 3 : UN BONBON  - - - - - - - - - - - - -->
+    
+    
+    <input id="theme-3" type="radio" name="slides">
+    <section class="slide bonbon">
+      
+        <div class="container">
+           
+            <h1 class="sijetais"><span>si j'étais...</span> un bonbon</h1>
+            
+            <h2 class="jeserais"><span>je serais...</span><br>une<br>fraise<br>tagada !</h2>
+            
+            
+            <div class="parceque">
+                <p>Quoi de mieux que ce petit bout de plaisir qui ne demande qu'à entrer en contact avec nos plus tendres souvenirs. Sa rencontre est à chaque fois un instant de pur bonheur où le temps semble ne plus avoir d'importance.</p>
+                <p>La fraise Tagada fait partie de ces petites choses sans lesquelles la vie ne serait plus tout à fait la même. C'est pétillant, plein de vitalité et en même temps si doux. À peine déposée contre le palais que les problèmes sont oubliés !</p>
+            </div>
+            
+            
+            <nav class="nav-theme">
+                <label class="icon-home2" for="accueil"></label><!-- correction du white spacing
+                --><label class="icon-siteweb1" for="theme-1"></label><!--
+                --><label class="icon-music1" for="theme-2"></label><!--
+                --><label class="icon-bonbon" for="theme-3"></label><!--
+                --><label class="icon-os1" for="theme-4"></label><!--   
+                --><label class="icon-sentiment2" for="theme-5"></label><!--   
+                --><label class="icon-ouverture" for="theme-6"></label><!--   
+                --><label class="icon-plante1" for="theme-7"></label>   
+            </nav>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <!-- - - - - - - - - - - - - THEME 4 : UN OS - - - - - - - - - - - - -->
+    
+    
+    <input id="theme-4" type="radio" name="slides">
+    <section class="slide os">
+      
+        <div class="container">
+           
+            <h1 class="sijetais"><span>si j'étais...</span> un  OS</h1>
+            
+            <h2 class="jeserais"><span>je serais...</span><br>Android !</h2>
+            
+            
+            <div class="parceque">
+                <p>Je serai présent tout autour du globe, je connaîtrai de nombreux pays et de nombreuses langues différentes, je serai ouvert à beaucoup de choses et confronté en même temps à un avenir encore incertain. </p>
+                <p>Peut-être bien qu'un jour je dominerai le monde dans mon secteur et beaucoup de gens m'apprécieront et compteront sur moi. Mais en attendant je ne cesse de me développer et compte bien sur la persévérance pour devenir le meilleur !</p> 
+            </div>
+            
+            
+            <nav class="nav-theme">
+                <label class="icon-home2" for="accueil"></label><!-- correction du white spacing
+                --><label class="icon-siteweb1" for="theme-1"></label><!--
+                --><label class="icon-music1" for="theme-2"></label><!--
+                --><label class="icon-bonbon" for="theme-3"></label><!--
+                --><label class="icon-os1" for="theme-4"></label><!--   
+                --><label class="icon-sentiment2" for="theme-5"></label><!--   
+                --><label class="icon-ouverture" for="theme-6"></label><!--   
+                --><label class="icon-plante1" for="theme-7"></label>   
+            </nav>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <!-- - - - - - - - - - - - - THEME 5 : UN SENTIMENT - - - - - - - - - - - - -->
+    
+    
+    <input id="theme-5" type="radio" name="slides">
+    <section class="slide sentiment">
+      
+        <div class="container">
+           
+            <h1 class="sijetais"><span>si j'étais...</span> un  sentiment</h1>
+            
+            <h2 class="jeserais"><span>je serais...</span><br>l'étonnement !</h2>
+            
+            
+            <div class="parceque">
+                <p>Imaginez un peu si l’existence n’était qu’un film sans surprise où tous les jours se suivent et se répètent sans jamais laisser de place à l’inconnu. Un vrai navet sans aucun intérêt diraient certains, mais la faute à qui ? Sûrement aux réalisateurs que nous sommes qui n’auraient pas su provoquer l’étonnement par peur de l’ignorance. </p>
+                <p>Je vois la vie comme un film ne demandant qu’à être un Spielberg sur-vitaminé sortant des sentiers battus dont nous sommes les réalisateurs. Il faut oser réaliser des choses, ce sans quoi la vie devient dépourvue d’étonnement et par conséquent d’intérêt.</p> 
+            </div>
+            
+            
+            <nav class="nav-theme">
+                <label class="icon-home2" for="accueil"></label><!-- correction du white spacing
+                --><label class="icon-siteweb1" for="theme-1"></label><!--
+                --><label class="icon-music1" for="theme-2"></label><!--
+                --><label class="icon-bonbon" for="theme-3"></label><!--
+                --><label class="icon-os1" for="theme-4"></label><!--   
+                --><label class="icon-sentiment2" for="theme-5"></label><!--   
+                --><label class="icon-ouverture" for="theme-6"></label><!--   
+                --><label class="icon-plante1" for="theme-7"></label>   
+            </nav>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <!-- - - - - - - - - - - - - THEME 6 : UNE OUVERTURE  - - - - - - - - - - - - -->
+    
+    
+    <input id="theme-6" type="radio" name="slides">
+    <section class="slide ouverture">
+      
+        <div class="container">
+           
+            <h1 class="sijetais"><span>si j'étais...</span> une ouverture</h1>
+            
+            <h2 class="jeserais"><span>je serais...</span><br>F/1.4 !</h2>
+            
+            
+            <div class="parceque">
+                <p>En tant que photographe en quête de perspective je ne peux qu’être fervent défenseur de cette caractéristique physique qui s’offre à moi lorsque j’ai mon appareil photo entre les mains. En effet c’est en étant à pleine ouverture que je laisse entrer un maximum de lumière et parviens à capturer les plus beaux moments.</p>
+<p>Plus qu’une caractéristique physique, une réelle façon de voir et d’interpréter le monde qui nous entoure.
+</p>
+            </div>
+            
+            
+            <nav class="nav-theme">
+                <label class="icon-home2" for="accueil"></label><!-- correction du white spacing
+                --><label class="icon-siteweb1" for="theme-1"></label><!--
+                --><label class="icon-music1" for="theme-2"></label><!--
+                --><label class="icon-bonbon" for="theme-3"></label><!--
+                --><label class="icon-os1" for="theme-4"></label><!--   
+                --><label class="icon-sentiment2" for="theme-5"></label><!--   
+                --><label class="icon-ouverture" for="theme-6"></label><!--   
+                --><label class="icon-plante1" for="theme-7"></label>   
+            </nav>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    <!-- - - - - - - - - - - - - THEME 7 : UNE PLANTE - - - - - - - - - - - - -->
+    
+    
+    <input id="theme-7" type="radio" name="slides">
+    <section class="slide plante">
+      
+        <div class="container">
+           
+            <h1 class="sijetais"><span>si j'étais...</span> une plante</h1>
+            
+            <h2 class="jeserais"><span>je serais...</span><br>une<br>rose<br>blanche !</h2>
+            
+            
+            <div class="parceque">
+                <p>Avant tout symbole de pureté, d’innocence et de paix, la rose blanche est parmi les fleurs les plus élégantes et raffinées qui soient.</p>
+<p>Elle incarne pour moi la mémoire et m’évoque les souvenirs de toutes ces choses qui nous ont accompagnés et quittés au cours de notre vie, elle est l’incarnation de tout ce qui est révolu, tout en gardant cette dualité d’être synonyme de renaissance et de nouveau départ.</p>
+            </div>
+            
+            
+            <nav class="nav-theme">
+                <label class="icon-home2" for="accueil"></label><!-- correction du white spacing
+                --><label class="icon-siteweb1" for="theme-1"></label><!--
+                --><label class="icon-music1" for="theme-2"></label><!--
+                --><label class="icon-bonbon" for="theme-3"></label><!--
+                --><label class="icon-os1" for="theme-4"></label><!--   
+                --><label class="icon-sentiment2" for="theme-5"></label><!--   
+                --><label class="icon-ouverture" for="theme-6"></label><!--   
+                --><label class="icon-plante1" for="theme-7"></label>   
+            </nav>
+            
+        </div>
+        
+    </section>
+
+</div>
+
+</body>
+
+</html>

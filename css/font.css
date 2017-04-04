@@ -1,0 +1,47 @@
+
+
+/**************** Police d'icone *******************/
+
+
+@font-face {
+  font-family: "icon";
+  src: url("../font/icon.eot");
+  src: url("../font/icon.eot?#iefix") format("embedded-opentype"),
+       url("../font/icon.woff") format("woff"),
+       url("../font/icon.ttf") format("truetype"),
+       url("../font/icon.svg#icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:after, [class*=" icon-"]:after {   
+  font-family: icon;
+font-style: normal;
+}
+
+.icon-bonbon:before { content: "\f100"; }
+.icon-croix:before { content: "\f101"; }
+.icon-home1:before { content: "\f102"; }
+.icon-home2:before { content: "\f103"; }
+.icon-home3:before { content: "\f104"; }
+.icon-internet:before { content: "\f105"; }
+.icon-music1:before { content: "\f106"; }
+.icon-music2:before { content: "\f107"; }
+.icon-music3:before { content: "\f108"; }
+.icon-music4:before { content: "\f109"; }
+.icon-music5:before { content: "\f10a"; }
+.icon-os1:before { content: "\f10b"; }
+.icon-os2:before { content: "\f10c"; }
+.icon-os3:before { content: "\f10d"; }
+.icon-os4:before { content: "\f10e"; }
+.icon-ouverture:before { content: "\f10f"; }
+.icon-plante1:before { content: "\f110"; }
+.icon-plante2:before { content: "\f111"; }
+.icon-plante3:before { content: "\f112"; }
+.icon-sentiment1:before { content: "\f113"; }
+.icon-sentiment2:before { content: "\f114"; }
+.icon-siteweb1:before { content: "\f115"; }
+.icon-siteweb3:before { content: "\f116"; }
+.icon-siteweb4:before { content: "\f117"; }
+.icon-sitweb2:before { content: "\f118"; }

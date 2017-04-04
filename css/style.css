@@ -1,0 +1,1467 @@
+/**************************************************************************
+
+CSS GENERAL 
+
+***************************************************************************/
+
+
+
+
+
+html {
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+}
+
+
+
+html, body {
+
+    /*La page et le body occupent tout l'écran sans aucune marge*/
+
+    height: 100%;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+
+/*Margin et padding n'augmentent pas la largeure et hauteur définies des éléments*/
+
+*, *:before, *:after {
+
+    box-sizing: border-box;
+
+}
+
+
+
+
+
+.main {
+
+    /*Le contenu fait toute la page*/
+
+    height: 100%;
+
+    width: 100%;
+
+    position: absolute;
+
+    
+
+    /*Le contenu qui depasse est masqué*/
+
+    overflow: hidden;
+
+    background: black;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+.container {
+
+    position: relative;
+
+    
+
+    /*centrer horizontalement et verticalement */
+
+    margin: 0 auto;
+
+    margin-top: 50vh;
+
+    transform: translateY(-50%);
+
+    
+
+    height: 576px;
+
+    min-width: 1024px;
+
+    max-width: 1024px;
+
+}
+
+
+
+
+
+label {
+
+    cursor: pointer;
+
+    display: inline-block;
+
+}
+
+
+
+
+
+/****************************************************************************
+
+SLIDE 
+
+******************************************************************************/
+
+
+
+
+
+/******* état slide quand elles sont invisibles *******/
+
+
+
+
+
+.slide {
+
+    height: 100%;
+
+    width: 100%;
+
+    position: absolute;
+
+    top: 0;
+
+    opacity: 0;
+
+    z-index: 10;
+
+    
+
+    /*L'arrière plan est centré verticalement et horizontalment au centre*/
+
+    background-position: 50% 50%;
+
+    background-size: cover;
+
+    
+
+    /*transition avec un délais de 2s pour ne pas être visible et dépendre de la transition d'apparition de la slide suivante qui passera devant*/
+
+    transition: opacity 0s 2s;
+
+}
+
+
+
+
+
+/******* état slide quand elles sont visibles ********/
+
+
+
+
+
+input:checked + .slide {
+
+    
+
+    /*Quand le champs input qui précède la slide est "checked" la slide passe devant et devient opaque*/
+
+    z-index: 20;
+
+    opacity: 1;
+
+    
+
+    /*transition pour passer à la slide suivante*/
+
+    transition: opacity .8s ease-out;
+
+}
+
+
+
+
+
+
+
+/*******************************************************************************
+
+IMAGES D'ARRIERE PLAN
+
+*******************************************************************************/
+
+
+
+
+
+.pageaccueil {
+
+    background-image: url("../img/accueil3.jpg");
+
+}
+
+
+
+.apropos {
+
+    background-image: url("../img/apropos3.jpg");
+
+}
+
+
+
+.siteweb {
+
+    background-image: url("../img/siteweb.jpg");   
+
+}
+
+
+
+.musique {
+
+    background-image: url("../img/musique.jpg");
+
+}
+
+
+
+.bonbon {
+
+    background-image: url(../img/bonbon.jpg);
+
+}
+
+
+
+.os {
+
+    background-image: url("../img/os.jpg");
+
+}
+
+
+
+.sentiment {
+
+    background-image: url("../img/sentiment.jpg");
+
+}
+
+
+
+.ouverture {
+
+    background-image: url("../img/ouverture.jpg");
+
+}
+
+
+
+.plante {
+
+    background-image: url("../img/plante.jpg");
+
+}
+
+
+
+
+
+
+
+/*******************************************************************************
+
+PAGE D'ACCUEIL 
+
+********************************************************************************/
+
+
+
+
+
+/***************** "Portrait chinois" ****************/
+
+
+
+
+
+.pageaccueil h1 {
+
+    position: absolute;
+
+    margin: 0;
+
+    top: 50px;
+
+    width: 100%;
+
+    font-size: 65px;
+
+}
+
+
+
+/*** animation ***/
+
+
+
+input:checked + .pageaccueil h1 {
+
+    /*l'animation est déclenchée dès l'apparition de la page*/
+
+    animation: titre 2.3s ease 0s;
+
+}
+
+
+
+/*état de l'animation dans le temps*/
+
+@keyframes titre {
+
+    0%, 50% {
+
+        transform: translateY(60%);
+
+        opacity: 0;
+
+    }
+
+    55% {
+
+        opacity: 0;
+
+    }
+
+    80% {
+
+        transform: translateY(0%);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+/********************** Barre de séparation *******************/
+
+
+
+
+
+.barre {
+
+    position: absolute;
+
+    margin: 0;
+
+    top: 140px;
+
+    width: 100%;
+
+}
+
+
+
+.barre hr {
+
+    width: 700px;
+
+    border-bottom: solid 4px white;
+
+}
+
+
+
+/*** animation ***/
+
+
+
+input:checked + .slide .barre hr {
+
+    animation: barre 1.5s ease 0s;
+
+}
+
+
+
+@keyframes barre {
+
+    0%, 45% {
+
+        opacity: 0;
+
+        width: 0%;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        width: 700px;
+
+    }
+
+}
+
+
+
+
+
+
+
+/********************* "Alexandre Massé" *************************/
+
+
+
+
+
+.pageaccueil h2 {
+
+    position: absolute;
+
+    margin: 0;
+
+    top: 160px;
+
+    width: 100%;
+
+    font-size: 40px;
+
+}
+
+
+
+/*** animation ***/
+
+
+
+input:checked + .pageaccueil h2 {
+
+    animation: nom 2.6s ease 0s;
+
+}
+
+
+
+@keyframes nom {
+
+    0%, 60% {
+
+        opacity: 0;
+
+        transform: translateY(-70%);
+
+    }
+
+    70% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: translateY(0%);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+/****************** Boutons de navigation ************************/
+
+
+
+
+
+.pageaccueil nav {
+
+    position: absolute;
+
+    width: 100%;
+
+    top: 70%;
+
+}
+
+
+
+.pageaccueil nav label {
+
+    width: 200px;
+
+    height: 60px;
+
+    line-height: 55px;
+
+    font-size: 22px;
+
+    margin: 0 120px;
+
+    border: 2px solid white;
+
+    transition: all .5s 0s;
+
+}
+
+
+
+/*** animation ***/
+
+
+
+input:checked + .pageaccueil nav label {
+
+    animation: nav 3.8s ease 0s;
+
+}
+
+
+
+@keyframes nav {
+
+    0%,60% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/*survol*/
+
+
+
+.pageaccueil nav label:hover {
+
+    color: black;
+
+    background-color: rgba(255, 255, 255, 0.90);
+
+    transition: all .5s ease 0s;
+
+}
+
+
+
+
+
+
+
+
+
+/********************************************************************************
+
+PAGE A PROPOS
+
+*********************************************************************************/
+
+
+
+
+
+/********** "A propos de moi" **********/
+
+
+
+
+
+.apropos h1 {
+
+    position: absolute;
+
+    margin: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    font-size: 50px;
+
+    
+
+}
+
+
+
+/*** animation ***/
+
+
+
+input:checked + .apropos h1 {
+
+    animation: aproposdemoi 2.3s ease 0s;
+
+}
+
+
+
+@keyframes aproposdemoi {
+
+    0%, 50% {
+
+        transform: translateY(60%);
+
+        opacity: 0;
+
+    }
+
+    60% {
+
+        opacity: 0;
+
+    }
+
+    80% {
+
+        transform: translateY(0%);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+/*********** Barre de séparation ***********/
+
+
+
+
+
+.barre2 {
+
+    position: absolute;
+
+    top: 75px;
+
+    width: 100%;
+
+}
+
+
+
+.barre2 hr {
+
+    width: 650px;
+
+    border-bottom: solid 3px white;
+
+}
+
+
+
+/*** animation ***/
+
+
+
+input:checked + .apropos .barre2 hr {
+
+    animation: barre2 1.5s ease 0s;
+
+}
+
+
+
+@keyframes barre2 {
+
+    0%, 45% {
+
+        opacity: 0;
+
+        width: 0%;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        width: 650px;
+
+    }
+
+}
+
+
+
+
+
+/************ Texte de présentation ************/
+
+
+
+
+
+.presentation {
+
+    position: absolute;
+
+    top: 23%;
+
+    left: 280px;
+
+    right: 60px;
+
+    font-size: 19px;
+
+    text-align: justify;
+
+    text-indent: 50px;
+
+}
+
+
+
+.presentation div {
+
+    text-align: center;
+
+    text-indent: -30px;
+
+}
+
+
+
+.presentation a {
+
+    color: white;
+
+}
+
+
+
+/**** Animation ***/
+
+
+
+input:checked + .apropos .presentation {
+
+    animation: presentation 3s ease 0s;
+
+}
+
+
+
+@keyframes presentation {
+
+    0%, 60% {
+
+        transform: translateX(-5%);
+
+        opacity: 0;
+
+    }
+
+    96% {
+
+        transform: translateX(0);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+/******************** Photo *********************/
+
+
+
+
+
+.apropos img {
+
+    position: absolute;
+
+    left: 50px;
+
+    top: 115px;
+
+    width: 190px;
+
+    border-radius: 50%;
+
+}
+
+
+
+/*** Animation ***/
+
+
+
+input:checked + .apropos img {
+
+    animation: image 3.5s ease 0s;
+
+} 
+
+
+
+@keyframes image {
+
+    0%, 70% {
+
+        transform: translateX(20%);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: translate(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+/****************** Liste de liens  *****************/
+
+
+
+
+
+.apropos ul {
+
+    list-style: none;
+
+    position: absolute;
+
+    padding: 0;
+
+    top: 290px;
+
+    left: 50px;
+
+}
+
+
+
+.apropos ul li {
+
+    margin: 20px 0;
+
+    width: 190px;
+
+    height: 40px;
+
+    line-height: 39px;
+
+    border: 1px solid white;
+
+}
+
+
+
+.apropos ul li a {
+
+    display: inline-block;
+
+    width: 100%;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 16px;
+
+    transition: all .5s ease 0s;
+
+}
+
+
+
+/*** Survol ***/
+
+
+
+.apropos ul li a:hover {
+
+    background-color: rgba(255, 255, 255, 0.90);
+
+    color: black;
+
+    transition: all .5s ease 0s;
+
+}
+
+
+
+/*** Animation ***/
+
+
+
+input:checked + .apropos ul li {
+
+    animation: lien 4s ease 0s;
+
+}
+
+
+
+@keyframes lien {
+
+    0%, 75% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+/******************* Bouton retour ******************/
+
+
+
+
+
+.apropos .icon-croix {
+
+    position: absolute;
+
+    right: 60px;
+
+    top: 15px;
+
+    font-size: 50px;
+
+    transition: transform 1s ease 0s;
+
+}
+
+
+
+.apropos .icon-croix:hover {
+
+    transform: rotate(-180deg);
+
+    transition: transform 1s ease 0s;
+
+}
+
+
+
+/*** Animation ***/
+
+
+
+input:checked + .apropos .icon-croix {
+
+    animation: croix 5s ease 0s;
+
+}
+
+
+
+@keyframes croix {
+
+    0%, 75% {
+
+        opacity: 0;
+
+        transform: rotate(200deg);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: rotateX(0deg);
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/****************************************************************************
+
+ETAT ET TRANSITION : "SI J'ETAIS..."
+
+*****************************************************************************/
+
+
+
+
+
+.sijetais {
+
+    position: absolute;
+
+    width: 100%;
+
+    margin: 0;
+
+    top: 0;
+
+    font-size: 65px;
+
+}
+
+
+
+.sijetais span{
+
+    /*le texte est plus petit et moins epais*/
+
+    font-size: 40px;
+
+    font-weight: normal;
+
+}
+
+
+
+
+
+/*** Affichage du texte quand le champs input juste avant est "checked" et Animation ***/
+
+
+
+input:checked + .slide .sijetais {
+
+    animation: sijetais 1.3s 0s;
+
+}
+
+
+
+@keyframes sijetais {
+
+    0%, 40% {
+
+        opacity: 0;
+
+        transform: translateY(100%);
+
+    }
+
+    50% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/******************************************************************************
+
+ETAT ET TRANSITION : "JE SERAIS..."
+
+*******************************************************************************/
+
+
+
+
+
+.jeserais {
+
+    margin: 0;
+
+    position: absolute;
+
+    top:160px;
+
+    left: 20px;
+
+    width: 260px;
+
+    font-size: 35px;
+
+}
+
+
+
+.jeserais span {
+
+    font-weight: normal;
+
+    font-size: 30px;
+
+}
+
+
+
+/*** Animation ***/
+
+
+
+input:checked + .slide .jeserais {
+
+    animation: jeserais 2.1s 0s;
+
+}
+
+
+
+@keyframes jeserais {
+
+    0%,60% {
+
+        opacity: 0;
+
+        transform: translateX(60%);
+
+    }
+
+    65% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/***********************************************************************************
+
+ETAT ET TRANSITION : TEXTE DU THEME
+
+************************************************************************************/
+
+
+
+
+
+.parceque {
+
+    position: absolute;
+
+    top: 110px;
+
+    left: 310px;
+
+    right: 60px;
+
+    font-size: 19px;
+
+    text-align: justify;
+
+    text-indent: 60px;
+
+}
+
+
+
+.parceque p a {
+
+    color: white;
+
+}
+
+
+
+/*** Animation ***/
+
+
+
+input:checked + .slide .parceque {
+
+    animation: parceque 2.8s 0s;
+
+}
+
+
+
+@keyframes parceque {
+
+    0%, 65% {
+
+        opacity: 0;
+
+        transform: translateX(-12%);
+
+    }
+
+    70% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+
+
+
+
+
+/***********************************************************************************
+
+MENU NAVIGATION THEME
+
+************************************************************************************/
+
+
+
+
+
+/**** Etat du menu lorqu'il est invisible ****/
+
+
+
+
+
+.nav-theme {
+
+    position: absolute;
+
+    bottom: 60px;
+
+    z-index: 900;
+
+    width: 100%;
+
+
+
+}
+
+
+
+
+
+/**** Etat du menu lorsqu'il est visible et Animation ****/
+
+
+
+
+
+input:checked + .slide .nav-theme {
+
+    color: rgba(255, 255, 255, 0.25);
+
+    transition: color .7s ease;
+
+    animation: nav-theme 3.8s ease 0s;
+
+}
+
+
+
+@keyframes nav-theme {
+
+    0%,80% {
+
+        opacity: 0;
+
+        color: rgba(255, 255, 255, 0);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        color: rgba(255, 255, 255, 0.25);
+
+    }
+
+}
+
+
+
+
+
+/**** Etat du menu lorqu'il est survolé ****/
+
+
+
+
+
+input:checked + .slide .nav-theme:hover {
+
+    color: rgba(255, 255, 255, 0.5);
+
+    transition: color .7s ease;
+
+}
+
+
+
+
+
+/*** Etat des labels ***/
+
+
+
+
+
+.slide .nav-theme label {
+
+    width: 100px;
+
+    height: 100px;
+
+    line-height: 100px;
+
+    margin: 0 10px;
+
+    font-size: 70px;
+
+    border-radius: 50%;
+
+}
+
+
+
+
+
+/*** Etat des labels lorqu'ils sont survolés ***/
+
+
+
+
+
+input:checked + .slide .nav-theme label:hover {
+
+    color: rgba(255, 255, 255, 0.85);
+
+}
+
+
+
+
+
+/**** Etat des labels lorsque le champs input correspondant est "checked" ****/
+
+
+
+
+
+input#theme-1:checked + .slide .nav-theme label[for="theme-1"],
+
+input#theme-2:checked + .slide .nav-theme label[for="theme-2"],
+
+input#theme-3:checked + .slide .nav-theme label[for="theme-3"],
+
+input#theme-4:checked + .slide .nav-theme label[for="theme-4"],
+
+input#theme-5:checked + .slide .nav-theme label[for="theme-5"],
+
+input#theme-6:checked + .slide .nav-theme label[for="theme-6"],
+
+input#theme-7:checked + .slide .nav-theme label[for="theme-7"] {
+
+    color: rgba(255, 255, 255, 1);
+
+}
+
+
+
+
